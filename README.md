@@ -2,7 +2,7 @@
 
 Personal portfolio website for **Ilias Tzanis**, Software Engineer specializing in Conversational AI and IVR development.
 
-🔗 **Live site:** [iliastzanis.github.io](https://iliastzanis.github.io)
+🔗 **Live site:** [iliastzanis.com](https://iliastzanis.com)
 
 ## Stack
 
