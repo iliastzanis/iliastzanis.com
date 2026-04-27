@@ -1,17 +1,26 @@
-# Ilias Tzanis - Professional Portfolio
+# Ilias Tzanis — Portfolio
 
-Welcome to the official repository for my professional portfolio website. This website is carefully crafted to exhibit my career achievements, technical proficiencies, and project involvements.
+Personal portfolio website for **Ilias Tzanis**, Software Engineer specializing in Conversational AI and IVR development.
 
-## Technology Stack
-- **HTML**: The backbone of the website, providing structure.
-- **CSS**: For custom styling and aesthetics.
-- **JavaScript**: To enhance interactivity and user experience.
+🔗 **Live site:** [iliastzanis.github.io](https://iliastzanis.github.io)
 
-## Overview
-This portfolio website serves as a detailed exposition of my professional journey. It encapsulates my academic accomplishments, work history, technical expertise, and notable projects. Designed with an emphasis on aesthetics and functionality, the site ensures a seamless and engaging experience across various devices.
+## Stack
 
-## Explore
-Discover more about my professional path and capabilities by visiting my portfolio [here](https://iliastzanis.github.io). The site offers a deep dive into my qualifications, technical skills, and professional experiences.
+- HTML, CSS, JavaScript
+- [Boxicons](https://boxicons.com/) for iconography
+- [html2pdf.js](https://ekoopmans.github.io/html2pdf.js/) for PDF export
 
-## Connect
-Interested in discussing potential collaborations or have questions? Feel welcome to [initiate a conversation](https://github.com/iliastzanis/iliastzanis/issues/new/choose) for any professional inquiries or partnership possibilities.
+## Sections
+
+- **Profile** — Brief professional summary
+- **Experience** — Work history including current role at Omilia
+- **Projects** — Academic and personal projects
+- **Skills** — Technical stack
+- **Education** — Ionian University MSc & BSc
+- **Languages** — Greek, English, German
+
+## Contact
+
+- 📧 iliastzanis1@gmail.com
+- 💼 [LinkedIn](https://www.linkedin.com/in/ilias-tzanis/)
+- 🐙 [GitHub](https://github.com/iliastzanis)
