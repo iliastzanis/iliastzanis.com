@@ -1,26 +1,28 @@
-# Ilias Tzanis — Portfolio
+# Ilias Tzanis Portfolio
 
-Personal portfolio website for **Ilias Tzanis**, Software Engineer specializing in Conversational AI and IVR development.
-
-🔗 **Live site:** [iliastzanis.com](https://iliastzanis.com)
+Personal portfolio website for [iliastzanis.com](https://iliastzanis.com), focused on software engineering, Conversational AI, IVR application development, automation, and selected project work.
 
 ## Stack
 
-- HTML, CSS, JavaScript
-- [Boxicons](https://boxicons.com/) for iconography
-- [html2pdf.js](https://ekoopmans.github.io/html2pdf.js/) for PDF export
+- HTML
+- CSS
+- JavaScript
+- Boxicons
+- GitHub Pages
 
 ## Sections
 
-- **Profile** — Brief professional summary
-- **Experience** — Work history including current role at Omilia
-- **Projects** — Academic and personal projects
-- **Skills** — Technical stack
-- **Education** — Ionian University MSc & BSc
-- **Languages** — Greek, English, German
+- Hero introduction
+- Professional focus areas
+- About
+- Experience
+- Selected projects
+- Skills
+- Education
+- Contact
 
 ## Contact
 
-- 📧 iliastzanis1@gmail.com
-- 💼 [LinkedIn](https://www.linkedin.com/in/ilias-tzanis/)
-- 🐙 [GitHub](https://github.com/iliastzanis)
+- Email: iliastzanis1@gmail.com
+- LinkedIn: [linkedin.com/in/ilias-tzanis](https://www.linkedin.com/in/ilias-tzanis/)
+- GitHub: [github.com/iliastzanis](https://github.com/iliastzanis)

@@ -1,328 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Ilias Tzanis &mdash; Software Engineer specializing in Conversational AI and IVR development. MSc Big Data &amp; Networked Systems." />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
-    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Ilias Tzanis is a software engineer focused on reliable web, automation, data, applied AI, and AI-assisted development workflows." />
+  <link rel="canonical" href="https://iliastzanis.com/" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ilias Tzanis | Software Engineer" />
+  <meta property="og:description"
+    content="Software engineer focused on reliable web, automation, data, applied AI, and AI-assisted development workflows." />
+  <meta property="og:url" content="https://iliastzanis.com/" />
+  <meta property="og:image" content="https://iliastzanis.com/assets/img/itzanis.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ilias Tzanis | Software Engineer" />
+  <meta name="twitter:description"
+    content="Software engineer focused on reliable web, automation, data, applied AI, and AI-assisted development workflows." />
+  <meta name="twitter:image" content="https://iliastzanis.com/assets/img/itzanis.jpg" />
 
-    <title>Ilias Tzanis | Software Engineer</title>
-  </head>
-  <body>
-    <header class="l-header" id="header">
-      <nav class="nav bd-container">
-        <a href="#" class="nav__logo">I.T.</a>
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active-link">
-                <i class="bx bx-home-alt-2 nav__icon"></i>Home
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#education" class="nav__link">
-                <i class="bx bx-book-alt nav__icon"></i>Education
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link">
-                <i class="bx bx-code-alt nav__icon"></i>Skills
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#profile" class="nav__link">
-                <i class="bx bx-user-circle nav__icon"></i>Profile
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#experience" class="nav__link">
-                <i class="bx bx-layer nav__icon"></i>Experience
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#projects" class="nav__link">
-                <i class="bx bx-briefcase nav__icon"></i>Projects
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-grid-alt"></i>
-        </div>
-      </nav>
-    </header>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
 
-    <main class="l-main bd-container">
-      <div class="resume" id="area-cv">
-        <div class="resume__left">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
-          <!-- HOME -->
-          <section class="home" id="home">
-            <div class="home__container section bd-grid">
-              <div class="home__data bd-grid">
-                <img src="assets/img/itzanis.jpg" alt="Ilias Tzanis" class="home__img" />
-                <h1 class="home__title">Ilias <b>Tzanis</b></h1>
-                <h3 class="home__profession">Software Engineer &nbsp;|&nbsp; Conversational AI Developer</h3>
-              </div>
-              <div class="home__address bd-grid">
-                <span class="home__information">
-                  <i class="bx bx-map-alt home__icon"></i> Igoumenitsa, Greece
-                </span>
-                <span class="home__information">
-                  <i class="bx bx-envelope home__icon"></i> iliastzanis1@gmail.com
-                </span>
-                <span class="home__information">
-                  <i class="bx bx-phone home__icon"></i> +30 6956001475
-                </span>
-              </div>
+  <title>Ilias Tzanis | Software Engineer</title>
+</head>
+
+<!-- Hardcoded dark-theme class makes Dark Mode the absolute default -->
+
+<body class="dark-theme">
+  <!-- This script only removes dark mode if the user explicitly clicked the toggle to "light" in the past -->
+  <script>
+    if (localStorage.getItem("selected-theme") === "light") {
+      document.body.classList.remove("dark-theme");
+    }
+  </script>
+
+  <header class="site-header" id="header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="#home" class="nav__brand" aria-label="Ilias Tzanis home">
+        <img src="assets/img/itzanis.jpg" alt="" class="nav__avatar" />
+        <span class="nav__brand-name">Ilias Tzanis</span>
+        <span class="nav__brand-tag">
+          <span class="tag-bracket">&lt;</span>Ilias Tzanis<span class="tag-bracket"> /&gt;</span>
+        </span>
+      </a>
+
+      <div class="nav__menu" id="nav-menu">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#workflow" class="nav__link">Workflow</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#skills" class="nav__link">Stack</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </div>
+
+      <div class="nav__controls">
+        <button class="theme-toggle" id="theme-button" type="button" aria-label="Toggle color theme">
+          <i class="bx bx-moon"></i>
+        </button>
+        <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <i class="bx bx-menu"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero__bg">
+        <div class="hero__bg-dots"></div>
+        <div class="hero__bg-light"></div>
+        <div class="hero__bg-dark"></div>
+      </div>
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <p class="eyebrow">Software Engineer &middot; Web &middot; Automation &middot; Applied AI</p>
+          <h1>I build reliable software with product-minded engineering.</h1>
+          <p class="hero__lead">
+            I work across application logic, automation, web technologies, testing, and applied AI,
+            using modern engineering workflows to move quickly without sacrificing quality.
+          </p>
+
+          <div class="hero__actions" aria-label="Primary actions">
+            <a href="#projects" class="button button--primary">
+              <i class="bx bx-folder-open"></i>
+              View Projects
+            </a>
+            <a href="#contact" class="button button--secondary">
+              <i class="bx bx-send"></i>
+              Contact
+            </a>
+            <a href="assets/pdf/IliasTzanisCV.pdf" class="button button--secondary" download>
+              <i class="bx bx-download"></i>
+              Download CV
+            </a>
+          </div>
+
+          <dl class="hero__meta" aria-label="Professional highlights">
+            <div>
+              <dt>Focus</dt>
+              <dd>Software delivery, automation, product quality</dd>
             </div>
-            <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
-            <i class="bx bxs-download generate-pdf" title="Generate PDF" id="resume-button"></i>
-          </section>
-
-          <!-- CONNECT -->
-          <section class="social section">
-            <h2 class="section-title">Connect</h2>
-            <div class="social__container bd-grid">
-              <a href="https://www.linkedin.com/in/ilias-tzanis/" target="_blank" rel="noopener noreferrer" class="social__link">
-                <i class="bx bxl-linkedin social__icon"></i> LinkedIn
-              </a>
-              <a href="https://github.com/iliastzanis" target="_blank" rel="noopener noreferrer" class="social__link">
-                <i class="bx bxl-github social__icon"></i> GitHub
-              </a>
+            <div>
+              <dt>Workflow</dt>
+              <dd>JavaScript, Python, Bash, Cursor, Claude</dd>
             </div>
-          </section>
-
-          <!-- EDUCATION -->
-          <section class="education section" id="education">
-            <h2 class="section-title">Education</h2>
-            <div class="education__container bd-grid">
-
-              <div class="education__content">
-                <div class="education__time">
-                  <span class="education__rounder"></span>
-                  <span class="education__line"></span>
-                </div>
-                <div class="education__data bd-grid">
-                  <h3 class="education__title">MSc Big Data &amp; Networked Systems</h3>
-                  <span class="education__studies">Ionian University</span>
-                  <span class="education__year">2022 &ndash; 2024</span>
-                </div>
-              </div>
-
-              <div class="education__content">
-                <div class="education__time">
-                  <span class="education__rounder"></span>
-                </div>
-                <div class="education__data bd-grid">
-                  <h3 class="education__title">BSc Informatics</h3>
-                  <span class="education__studies">Ionian University</span>
-                  <span class="education__year">2016 &ndash; 2022</span>
-                </div>
-              </div>
-
+            <div>
+              <dt>Location</dt>
+              <dd>Greece &middot; Remote-friendly</dd>
             </div>
-          </section>
-
-          <!-- SKILLS -->
-          <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills__content bd-grid">
-              <ul class="skills__data">
-                <li class="skills__name">
-                  <span class="skills__circle"></span>
-                  Conversational AI &amp; IVR: Omilia OCP
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span>
-                  Languages: JavaScript, Bash, Python
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span>
-                  AI-Assisted Dev: Cursor IDE, Claude AI
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span>
-                  Testing &amp; QA: Omilia Testing Studio, YAML
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span>
-                  Web: HTML, CSS, WordPress, WooCommerce
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span>
-                  Mobile: Flutter, Firebase
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span>
-                  Monitoring: Grafana, ServiceNow
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span>
-                  Version Control: Git, GitHub
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- LANGUAGES -->
-          <section class="languages section">
-            <h2 class="section-title">Languages</h2>
-            <div class="languages__container">
-              <ul class="languages__content bd-grid">
-                <li class="languages__name">
-                  <span class="languages__circle"></span> Greek (Native)
-                </li>
-                <li class="languages__name">
-                  <span class="languages__circle"></span> English (Professional)
-                </li>
-                <li class="languages__name">
-                  <span class="languages__circle"></span> German
-                </li>
-              </ul>
-            </div>
-          </section>
-
+          </dl>
         </div>
 
-        <div class="resume__right">
-
-          <!-- PROFILE -->
-          <section class="profile section" id="profile">
-            <h2 class="section-title">Profile</h2>
-            <p class="profile__description">
-              Software Engineer specializing in Conversational AI and IVR development, delivering
-              production-grade applications for enterprise clients on Omilia&rsquo;s OCP platform.
-              Hands-on with JavaScript, Bash scripting, AI-assisted development, and automated testing.
-              MSc in Big Data &amp; Networked Systems with a thesis in Deep Learning.
+        <aside class="hero__profile" aria-label="Profile summary">
+          <img src="assets/img/itzanis.jpg" alt="Ilias Tzanis" class="hero__image" />
+          <div class="profile-card">
+            <p class="profile-card__label">Current role</p>
+            <p class="profile-card__title">Software Engineer</p>
+            <p class="profile-card__text">
+              Building production software across application logic, automation, testing, and client delivery.
             </p>
-          </section>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-          <!-- EXPERIENCE -->
-          <section class="experience section" id="experience">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience__container bd-grid">
-
-              <div class="experience__content">
-                <div class="experience__time">
-                  <span class="experience__rounder"></span>
-                  <span class="experience__line"></span>
-                </div>
-                <div class="experience__data bd-grid">
-                  <h3 class="experience__title">Software Engineer &mdash; Conversational AI Developer</h3>
-                  <span class="experience__company">June 2024 &ndash; Present &nbsp;|&nbsp; Omilia &nbsp;&middot;&nbsp; Remote</span>
-                  <p class="experience__description">
-                    Design and develop IVR applications for enterprise clients using Omilia&rsquo;s OCP platform.
-                    Implement call-flow logic and business rules in JavaScript.
-                    Use Cursor IDE with Claude AI to maintain high development velocity and code quality.
-                    Write Bash automation scripts for deployment and environment management.
-                    Build and run automated regression tests with Omilia Testing Studio and YAML test definitions.
-                    Work directly with clients and internal teams to ship production-ready solutions.
-                    Selected for on-site deployment to Sydney, Australia (February 2026) to support Optus
-                    in delivering a public sector Conversational AI implementation.
-                  </p>
-                </div>
-              </div>
-
-              <div class="experience__content">
-                <div class="experience__time">
-                  <span class="experience__rounder"></span>
-                  <span class="experience__line"></span>
-                </div>
-                <div class="experience__data bd-grid">
-                  <h3 class="experience__title">Application Support Analyst &mdash; SL2</h3>
-                  <span class="experience__company">June 2024 &ndash; March 2025 &nbsp;|&nbsp; European Dynamics &nbsp;&middot;&nbsp; Remote</span>
-                  <p class="experience__description">
-                    Delivered SL2 technical support ensuring system stability and SLA compliance.
-                    Monitored performance via Grafana and escalated incidents to reduce downtime.
-                    Resolved tickets in ServiceNow collaborating with developers and business analysts.
-                  </p>
-                </div>
-              </div>
-
-              <div class="experience__content">
-                <div class="experience__time">
-                  <span class="experience__rounder"></span>
-                  <span class="experience__line"></span>
-                </div>
-                <div class="experience__data bd-grid">
-                  <h3 class="experience__title">Front-end Developer</h3>
-                  <span class="experience__company">April 2024 &ndash; July 2024 &nbsp;|&nbsp; DonDigital.gr &nbsp;&middot;&nbsp; Freelance</span>
-                  <p class="experience__description">
-                    Built and maintained e-commerce sites using WordPress, WooCommerce, CSS, and JavaScript.
-                    Delivered UI improvements and plugin integrations that improved usability and client satisfaction.
-                  </p>
-                </div>
-              </div>
-
-              <div class="experience__content">
-                <div class="experience__time">
-                  <span class="experience__rounder"></span>
-                </div>
-                <div class="experience__data bd-grid">
-                  <h3 class="experience__title">Web Developer &amp; Technician</h3>
-                  <span class="experience__company">March 2023 &ndash; October 2023 &nbsp;|&nbsp; .COM Business Computing</span>
-                  <p class="experience__description">
-                    Managed client websites on WordPress and provided hardware and software technical support.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </section>
-
-          <!-- PROJECTS -->
-          <section class="project section" id="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="project__container bd-grid">
-
-              <div class="project__content">
-                <h3 class="project__title">
-                  <a href="https://github.com/iliastzanis/MScThesis-IonianUniversity" target="_blank" rel="noopener noreferrer" class="project__link">
-                    Bitcoin Price Prediction &mdash; Deep Learning
-                    <i class="bx bx-link-external project__icon"></i>
-                  </a>
-                </h3>
-                <p class="project__description">
-                  MSc Thesis. Researched and implemented ARIMA, SVM, and LSTM models to predict Bitcoin
-                  prices from historical market data. Focused on time-series feature engineering and
-                  model performance comparison.
-                </p>
-              </div>
-
-              <div class="project__content">
-                <h3 class="project__title">
-                  <a href="https://github.com/iliastzanis/LocalTaste-App" target="_blank" rel="noopener noreferrer" class="project__link">
-                    LocalTaste &mdash; Mobile Application
-                    <i class="bx bx-link-external project__icon"></i>
-                  </a>
-                </h3>
-                <p class="project__description">
-                  Led a 3-person team to design and build a Flutter &amp; Firebase mobile app
-                  showcasing traditional Corfu recipes and local food products.
-                  Responsible for architecture, UI/UX design, and delivery.
-                </p>
-              </div>
-
-            </div>
-          </section>
-
+    <section class="section section--compact">
+      <div class="container">
+        <div class="signal-grid" aria-label="Core strengths">
+          <div class="signal">
+            <i class="bx bx-layer"></i>
+            <span>Production application development</span>
+          </div>
+          <div class="signal">
+            <i class="bx bx-code-curly"></i>
+            <span>JavaScript business logic and integration work</span>
+          </div>
+          <div class="signal">
+            <i class="bx bx-bolt-circle"></i>
+            <span>AI-assisted engineering workflow</span>
+          </div>
+          <div class="signal">
+            <i class="bx bx-check-shield"></i>
+            <span>Testing, monitoring, and production support</span>
+          </div>
         </div>
       </div>
-    </main>
+    </section>
 
-    <a href="#" class="scrolltop" id="scroll-top">
-      <i class="bx bx-arrow-to-top scrolltop__icon"></i>
-    </a>
+    <section class="section" id="about">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Practical engineering for software that needs to work clearly and reliably.</h2>
+        </div>
+        <div class="about__right">
+          <div class="section-copy">
+            <p>
+              I am a software engineer interested in building useful, maintainable systems across web,
+              automation, data, and applied AI. My recent work includes production enterprise applications,
+              while my broader focus is dependable software engineering: clear logic, thoughtful interfaces,
+              testing, and practical delivery.
+            </p>
+            <p>
+              I hold an MSc in Big Data &amp; Networked Systems and bring a grounded engineering mindset to
+              projects that need both technical depth and attention to user-facing quality.
+            </p>
+          </div>
 
-    <script src="assets/js/html2pdf.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+          <div class="about__education">
+            <p class="about__education-label">
+              <i class="bx bx-graduation"></i>
+              Education
+            </p>
+            <div class="about__degrees">
+              <div class="about__degree">
+                <div class="about__degree-dot"></div>
+                <div>
+                  <p class="about__degree-title">MSc, Big Data &amp; Networked Systems</p>
+                  <p class="about__degree-meta">Ionian University &middot; February 2024</p>
+                  <p class="about__degree-thesis">Thesis: Bitcoin Price Prediction Using Deep Learning</p>
+                </div>
+              </div>
+              <div class="about__degree">
+                <div class="about__degree-dot"></div>
+                <div>
+                  <p class="about__degree-title">BSc, Informatics</p>
+                  <p class="about__degree-meta">Ionian University &middot; May 2022</p>
+                  <p class="about__degree-thesis">Thesis: Mapography Mobile Crowdsensing Application</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="experience">
+      <div class="container">
+        <div class="section-heading section-heading--wide">
+          <p class="eyebrow">Experience</p>
+          <h2>Recent work across software engineering, support operations, automation, and web delivery.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline__item">
+            <div class="timeline__meta">
+              <span class="timeline__date"><i class="bx bx-calendar-alt"></i> March 2025 &ndash; Present</span>
+              <span class="timeline__location"><i class="bx bx-map"></i> Remote</span>
+            </div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <h3>Software Engineer &middot; Conversational AI Application Developer</h3>
+                <span class="timeline__company-badge">Omilia</span>
+              </div>
+              <ul class="clean-list">
+                <li>Design and develop production applications for enterprise clients using Omilia's OCP platform.</li>
+                <li>Implement application logic, business rules, and dynamic user-flow scenarios in JavaScript.</li>
+                <li>Write Bash automation scripts for deployment, configuration, and operational workflows.</li>
+                <li>Build regression test suites with Omilia Testing Studio and YAML-defined test cases.</li>
+                <li>Collaborate with clients and cross-functional teams to deliver production-ready solutions.</li>
+                <li>Provided on-site implementation support in Sydney for an Optus public sector conversational AI
+                  project.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__meta">
+              <span class="timeline__date"><i class="bx bx-calendar-alt"></i> June 2024 &ndash; March 2025</span>
+              <span class="timeline__location"><i class="bx bx-map"></i> Remote</span>
+            </div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <h3>Application Support Analyst &middot; SL2 Support &middot; IT Consultant</h3>
+                <span class="timeline__company-badge">European Dynamics</span>
+              </div>
+              <ul class="clean-list">
+                <li>Provided SL2 technical support focused on system stability and SLA-driven issue resolution.</li>
+                <li>Monitored performance with Grafana and escalated incidents to reduce downtime.</li>
+                <li>Resolved ServiceNow tickets in collaboration with developers and business analysts.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__meta">
+              <span class="timeline__date"><i class="bx bx-calendar-alt"></i> April 2024 &ndash; June 2024</span>
+              <span class="timeline__location"><i class="bx bx-briefcase"></i> Freelance</span>
+            </div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <h3>Front-end Developer</h3>
+                <span class="timeline__company-badge">DonDigital.gr</span>
+              </div>
+              <ul class="clean-list">
+                <li>Maintained and enhanced e-commerce websites using WordPress, WooCommerce, CSS, and JavaScript.</li>
+                <li>Delivered UI improvements and plugin integrations for client-facing sites.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__meta">
+              <span class="timeline__date"><i class="bx bx-calendar-alt"></i> March 2023 &ndash; April 2024</span>
+              <span class="timeline__location"><i class="bx bx-map"></i> Igoumenitsa, Greece</span>
+            </div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <h3>Web Developer &amp; Technician</h3>
+                <span class="timeline__company-badge">.COM Business Computing</span>
+              </div>
+              <ul class="clean-list">
+                <li>Managed client WordPress websites and provided hardware and software technical support.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Tech Stack &amp; Workflow</p>
+          <h2>Modern tools, disciplined execution, and a strong bias toward quality.</h2>
+        </div>
+
+        <div class="workflow-grid">
+          <article class="workflow-card workflow-card--featured">
+            <span class="workflow-card__label">AI-Assisted Development</span>
+            <h3>Cursor and Claude as engineering leverage</h3>
+            <p>
+              I use AI coding tools as part of a disciplined workflow: accelerating implementation,
+              exploring alternatives, strengthening test coverage, and reviewing code more effectively
+              while keeping engineering judgment central.
+            </p>
+          </article>
+          <article class="workflow-card">
+            <span class="workflow-card__label">Core Engineering</span>
+            <h3>Application logic and automation</h3>
+            <p>
+              JavaScript, Bash, and Python for business logic, scripting, integrations, configuration,
+              and repeatable operational workflows.
+            </p>
+          </article>
+          <article class="workflow-card">
+            <span class="workflow-card__label">Quality Loop</span>
+            <h3>Testing before confidence</h3>
+            <p>
+              Regression testing, YAML-defined test cases, monitoring, and support experience help me
+              ship changes with a practical understanding of production risk.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading section-heading--wide">
+          <p class="eyebrow">Selected Projects</p>
+          <h2>Projects that show research depth, product thinking, and technical range.</h2>
+        </div>
+
+        <div class="project-filters" role="tablist" aria-label="Filter projects by category">
+          <button class="project-filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="project-filter" data-filter="thesis" role="tab" aria-selected="false">Research</button>
+          <button class="project-filter" data-filter="mobile" role="tab" aria-selected="false">Mobile</button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card" data-category="thesis">
+            <div class="project-card__accent"></div>
+            <div class="project-card__body">
+              <span class="project-card__type">MSc Thesis</span>
+              <h3>Bitcoin Price Prediction with Deep Learning</h3>
+              <p>
+                Researched and implemented ARIMA, SVM, and LSTM models for time-series prediction using
+                historical market data.
+              </p>
+              <ul class="tag-list" aria-label="Project technologies">
+                <li>Python</li>
+                <li>Deep Learning</li>
+                <li>Time Series</li>
+                <li>Model Comparison</li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <a href="https://github.com/iliastzanis/MScThesis-IonianUniversity" target="_blank"
+                rel="noopener noreferrer" class="button button--primary"
+                aria-label="Open Bitcoin Price Prediction project on GitHub">
+                <i class="bx bxl-github"></i>
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="mobile">
+            <div class="project-card__accent"></div>
+            <div class="project-card__body">
+              <span class="project-card__type">Mobile App</span>
+              <h3>LocalTaste Mobile App</h3>
+              <p>
+                Led a 3-person team building a Flutter and Firebase app for traditional Corfu recipes and
+                local food products.
+              </p>
+              <ul class="tag-list" aria-label="Project technologies">
+                <li>Flutter</li>
+                <li>Firebase</li>
+                <li>UI/UX</li>
+                <li>Team Lead</li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <a href="https://github.com/iliastzanis/LocalTaste-App" target="_blank" rel="noopener noreferrer"
+                class="button button--primary" aria-label="Open LocalTaste project on GitHub">
+                <i class="bx bxl-github"></i>
+                View on GitHub
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="skills">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Stack</p>
+          <h2>A focused technical toolkit for building, testing, and shipping software.</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-group">
+            <h3>Software Engineering</h3>
+            <p>Application logic, requirements translation, production delivery, maintainable implementation</p>
+          </article>
+          <article class="skill-group">
+            <h3>Programming &amp; Automation</h3>
+            <p>JavaScript, Bash, Python, HTML, CSS</p>
+          </article>
+          <article class="skill-group">
+            <h3>Testing &amp; Operations</h3>
+            <p>Omilia Testing Studio, YAML test definitions, regression testing, Grafana, ServiceNow</p>
+          </article>
+          <article class="skill-group">
+            <h3>Web &amp; Mobile</h3>
+            <p>WordPress, WooCommerce, Flutter, Firebase</p>
+          </article>
+          <article class="skill-group">
+            <h3>AI-Assisted Development</h3>
+            <p>Cursor, Claude, prompt-driven iteration, code review support, test ideation</p>
+          </article>
+          <article class="skill-group">
+            <h3>Data &amp; Applied AI</h3>
+            <p>Deep Learning, Big Data, time-series modeling, Python research workflows</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="contact__text">
+            <p class="eyebrow">Contact</p>
+            <h2>Available for software engineering opportunities and selected collaborations.</h2>
+            <p class="contact__sub">Open to full-time roles, contract work, and interesting projects. I respond to every
+              serious inquiry.</p>
+          </div>
+          <div class="contact__actions">
+            <a href="mailto:iliastzanis1@gmail.com" class="button button--primary">
+              <i class="bx bx-envelope"></i>
+              Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/ilias-tzanis/" target="_blank" rel="noopener noreferrer"
+              class="button button--secondary">
+              <i class="bx bxl-linkedin"></i>
+              LinkedIn
+            </a>
+            <a href="https://github.com/iliastzanis" target="_blank" rel="noopener noreferrer"
+              class="button button--secondary">
+              <i class="bx bxl-github"></i>
+              GitHub
+            </a>
+            <a href="assets/pdf/IliasTzanisCV.pdf" class="button button--secondary" download>
+              <i class="bx bx-download"></i>
+              Download CV
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__status">
+          <span class="status-dot"></span>
+          <span>Available for new opportunities</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">&copy; <span id="footer-year">2026</span> Ilias Tzanis</span>
+      <span class="footer__divider" aria-hidden="true">&mdash;</span>
+      <span class="footer__credit">Designed &amp; built by Ilias Tzanis</span>
+      <div class="footer__links">
+        <a href="https://github.com/iliastzanis" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="bx bxl-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ilias-tzanis/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <i class="bx bxl-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#home" class="scrolltop" id="scroll-top" aria-label="Back to top">
+    <i class="bx bx-up-arrow-alt"></i>
+  </a>
+
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ilias Tzanis",
+        "url": "https://iliastzanis.com/",
+        "image": "https://iliastzanis.com/assets/img/itzanis.jpg",
+        "jobTitle": "Software Engineer",
+        "sameAs": [
+          "https://www.linkedin.com/in/ilias-tzanis/",
+          "https://github.com/iliastzanis"
+        ],
+        "knowsAbout": [
+          "Software Engineering",
+          "JavaScript",
+          "Python",
+          "Automation",
+          "Web Development",
+          "Applied AI",
+          "AI-Assisted Development",
+          "Cursor",
+          "Claude AI"
+        ]
+      }
+    </script>
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>

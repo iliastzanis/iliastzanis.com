@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4361ee"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.15)"/>
+      <stop offset="60%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background and Shine -->
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#g)"/>
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#shine)"/>
+
+  <!-- I -->
+  <rect x="146" y="150" width="50" height="212" rx="6" ry="6" fill="white" fill-opacity="0.95"/>
+
+  <!-- Unified T (Combined into a single path) -->
+  <path d="M 226 150
+           H 362
+           A 6 6 0 0 1 368 156
+           V 190
+           A 6 6 0 0 1 362 196
+           H 318
+           V 356
+           A 6 6 0 0 1 312 362
+           H 276
+           A 6 6 0 0 1 270 356
+           V 196
+           H 226
+           A 6 6 0 0 1 220 190
+           V 156
+           A 6 6 0 0 1 226 150 Z" 
+        fill="white" fill-opacity="0.95"/>
+</svg>
