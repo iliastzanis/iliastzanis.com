@@ -1408,7 +1408,7 @@ body.dark-theme .hero__bg-dark {
   }
 
   :root {
-    --theme-speed: 200ms;
+    --theme-speed: 270ms;
   }
 
   body.theme-transitioning .project-card,
@@ -1427,7 +1427,10 @@ body.dark-theme .hero__bg-dark {
   body.theme-transitioning .workflow-card::after,
   body.theme-transitioning .workflow-card--featured,
   body.theme-transitioning .workflow-card--featured::before,
-  body.theme-transitioning .workflow-card--featured::after {
+  body.theme-transitioning .workflow-card--featured::after,
+  body.theme-transitioning .workflow-card *,
+  body.theme-transitioning .workflow-card *::before,
+  body.theme-transitioning .workflow-card *::after {
     transition: none !important;
   }
 }
