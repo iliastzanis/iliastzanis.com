@@ -1422,4 +1422,12 @@ body.dark-theme .hero__bg-dark {
     transition-duration: var(--theme-speed) !important;
     transition-timing-function: ease !important;
   }
+
+  body.theme-transitioning .workflow-card::before,
+  body.theme-transitioning .workflow-card::after,
+  body.theme-transitioning .workflow-card--featured,
+  body.theme-transitioning .workflow-card--featured::before,
+  body.theme-transitioning .workflow-card--featured::after {
+    transition: none !important;
+  }
 }
