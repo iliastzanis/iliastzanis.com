@@ -1406,4 +1406,20 @@ body.dark-theme .hero__bg-dark {
   .footer__links {
     margin-left: 0;
   }
+
+  :root {
+    --theme-speed: 200ms;
+  }
+
+  body.theme-transitioning .project-card,
+  body.theme-transitioning .profile-card,
+  body.theme-transitioning .timeline__item,
+  body.theme-transitioning .skill-group,
+  body.theme-transitioning .workflow-card,
+  body.theme-transitioning .signal-grid,
+  body.theme-transitioning .signal {
+    transition-property: background-color, border-color, color !important;
+    transition-duration: var(--theme-speed) !important;
+    transition-timing-function: ease !important;
+  }
 }

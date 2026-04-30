@@ -25,18 +25,20 @@ if (navToggle && navMenu) {
     const isOpen = navMenu.classList.toggle("show-menu");
     document.body.classList.toggle("menu-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
-    navToggle.innerHTML = isOpen ? '<i class="bx bx-x"></i>' : '<i class="bx bx-menu"></i>';
+    navToggle.innerHTML = isOpen
+      ? '<i class="bx bx-x"></i>'
+      : '<i class="bx bx-menu"></i>';
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      closeMenu();
+      isNavigating = true;
+      allNavLinks.forEach((nav) => nav.classList.remove("active-link"));
+      this.classList.add("active-link");
+    });
   });
 }
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", function (e) {
-    closeMenu();
-    isNavigating = true;
-    allNavLinks.forEach((nav) => nav.classList.remove("active-link"));
-    this.classList.add("active-link");
-  });
-});
 
 function updateActiveLink() {
   if (isNavigating) return;
@@ -45,7 +47,8 @@ function updateActiveLink() {
   // FIX: offset must exceed scroll-margin-top (headerH + 28px = ~100px) to correctly
   // detect which section is active after the browser finishes scrolling to it.
   const scrollY = window.scrollY + headerH + 32;
-  const pageBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 80;
+  const pageBottom =
+    window.scrollY + window.innerHeight >= document.body.scrollHeight - 80;
 
   let activeId = null;
 
@@ -60,22 +63,29 @@ function updateActiveLink() {
   }
 
   allNavLinks.forEach((link) => {
-    link.classList.toggle("active-link", link.getAttribute("href") === `#${activeId}`);
+    link.classList.toggle(
+      "active-link",
+      link.getAttribute("href") === `#${activeId}`
+    );
   });
 }
 
 // Waits until scrolling fully stops (150ms silence) before re-enabling spy
-window.addEventListener("scroll", () => {
-  if (isNavigating) {
-    if (scrollEndTimer) clearTimeout(scrollEndTimer);
-    scrollEndTimer = setTimeout(() => {
-      isNavigating = false;
-      updateActiveLink();
-    }, 150);
-    return;
-  }
-  updateActiveLink();
-}, { passive: true });
+window.addEventListener(
+  "scroll",
+  () => {
+    if (isNavigating) {
+      if (scrollEndTimer) clearTimeout(scrollEndTimer);
+      scrollEndTimer = setTimeout(() => {
+        isNavigating = false;
+        updateActiveLink();
+      }, 150);
+      return;
+    }
+    updateActiveLink();
+  },
+  { passive: true }
+);
 
 window.addEventListener("load", updateActiveLink);
 
@@ -104,10 +114,16 @@ themeButton?.addEventListener("click", () => {
   const icon = themeButton.querySelector("i");
 
   if (icon) {
-    icon.className = isDark ? `bx ${iconTheme}` : 'bx bx-moon';
+    icon.className = isDark ? `bx ${iconTheme}` : "bx bx-moon";
   }
 
-  localStorage.setItem("selected-theme", isDark ? "dark" : "light");
+  // Only persist when user deviates from default (light).
+  // When back to dark, remove the key so default takes over on next load.
+  if (isDark) {
+    localStorage.removeItem("selected-theme");
+  } else {
+    localStorage.setItem("selected-theme", "light");
+  }
 
   setTimeout(() => {
     document.body.classList.remove("theme-transitioning");
@@ -140,7 +156,9 @@ filterButtons.forEach((btn) => {
     btn.setAttribute("aria-selected", "true");
 
     const filter = btn.dataset.filter;
-    const visible = Array.from(projectCards).filter((c) => !c.classList.contains("is-hidden"));
+    const visible = Array.from(projectCards).filter(
+      (c) => !c.classList.contains("is-hidden")
+    );
 
     visible.forEach((card) => {
       card.style.transition = "opacity 160ms ease, transform 160ms ease";
@@ -150,7 +168,8 @@ filterButtons.forEach((btn) => {
 
     const t1 = setTimeout(() => {
       projectCards.forEach((card) => {
-        const match = filter === "all" || card.dataset.category === filter;
+        const match =
+          filter === "all" || card.dataset.category === filter;
         if (match) {
           card.classList.remove("is-hidden");
           card.style.opacity = "0";
@@ -165,7 +184,8 @@ filterButtons.forEach((btn) => {
       const t2 = setTimeout(() => {
         projectCards.forEach((card) => {
           if (!card.classList.contains("is-hidden")) {
-            card.style.transition = "opacity 240ms ease, transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease";
+            card.style.transition =
+              "opacity 240ms ease, transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease";
             card.style.opacity = "1";
             card.style.transform = "translateY(0)";
           }
@@ -178,7 +198,6 @@ filterButtons.forEach((btn) => {
             card.style.transform = "";
           });
         }, 250);
-
       }, 20);
       filterTimeouts.push(t2);
     }, 170);
@@ -186,8 +205,8 @@ filterButtons.forEach((btn) => {
   });
 });
 
-document.querySelectorAll('.button, .project-filter').forEach(btn => {
-  btn.addEventListener('pointerup', function (e) {
+document.querySelectorAll(".button, .project-filter").forEach((btn) => {
+  btn.addEventListener("pointerup", function (e) {
     setTimeout(() => {
       this.blur();
     }, 150);
