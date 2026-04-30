@@ -1407,30 +1407,8 @@ body.dark-theme .hero__bg-dark {
     margin-left: 0;
   }
 
-  :root {
-    --theme-speed: 270ms;
-  }
-
-  body.theme-transitioning .project-card,
-  body.theme-transitioning .profile-card,
-  body.theme-transitioning .timeline__item,
-  body.theme-transitioning .skill-group,
-  body.theme-transitioning .workflow-card,
-  body.theme-transitioning .signal-grid,
-  body.theme-transitioning .signal {
-    transition-property: background-color, border-color, color !important;
-    transition-duration: var(--theme-speed) !important;
-    transition-timing-function: ease !important;
-  }
-
-  body.theme-transitioning .workflow-card::before,
-  body.theme-transitioning .workflow-card::after,
-  body.theme-transitioning .workflow-card--featured,
-  body.theme-transitioning .workflow-card--featured::before,
-  body.theme-transitioning .workflow-card--featured::after,
-  body.theme-transitioning .workflow-card *,
-  body.theme-transitioning .workflow-card *::before,
-  body.theme-transitioning .workflow-card *::after {
-    transition: none !important;
+  /* ── Mobile: instant theme switch, no transition lag ── */
+  body.theme-transitioning {
+    --theme-speed: 0ms;
   }
 }
